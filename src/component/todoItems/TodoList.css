@@ -1,3 +1,51 @@
-.todo{
-    color: green;
+.listItems {
+  background-color: #fff;
+  color: lightseagreen;
+}
+
+.listItems p {
+  margin: 0;
+  text-align: center;
+  padding: 10px 10px;
+  overflow: hidden;
+}
+
+.listItems span {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  border: 0.3px solid #ccc;
+  margin: 0;
+}
+.title {
+  background: #555;
+}
+.listItems span.name,
+form input[type="text"] {
+  width: 50%;
+}
+.listItems span.age,
+form input[type="number"] {
+  width: 30%;
+}
+.listItems span.action,
+form input[type="submit"] {
+  width: 20%;
+  float: right;
+  cursor: pointer;
+}
+form input {
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555;
+  border: 1px solid #ccc;
+  color: #fff;
+}
+.listItems span.icon{
+    color: red;
 }
