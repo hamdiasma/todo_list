@@ -10,11 +10,31 @@ class App extends React.Component {
       { id: 3, name: "sandra", age: 1 },
     ],
   };
+
+  deleteItem = (id) => {
+    // let items = this.state.items;
+    // let i = items.findIndex((item) => item.id === id);
+    // items.splice(i, 1);
+    // this.setState({
+    //   items:items
+    // })
+
+    let itemsdel = this.state.items.filter((item) => {
+      return item.id !== id;
+    });
+    this.setState({
+      items: itemsdel,
+    });
+  };
+
   render() {
     return (
       <div className="App">
         <h2>TODO LIST</h2>
-        <TodoItems listPropsItems={this.state.items}/>
+        <TodoItems
+          listPropsItems={this.state.items}
+          deleteItem={this.deleteItem}
+        />
         <AddItems />
       </div>
     );

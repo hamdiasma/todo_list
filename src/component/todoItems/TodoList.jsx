@@ -2,11 +2,12 @@ import React from "react";
 import "./TodoList.css";
 
 const TodoItems = (props) => {
-  const { listPropsItems } = props;
+  const { listPropsItems, deleteItem} = props;
+
   const listItems = listPropsItems.map((item) => {
     return (
       <div key={item.id}>
-        <span>{item.name}</span> <span>{item.age}</span> <span>&times;</span>
+        <span>{item.name}</span> <span>{item.age}</span> <span onClick={()=>deleteItem(item.id)}>&times;</span>
       </div>
     );
   });
